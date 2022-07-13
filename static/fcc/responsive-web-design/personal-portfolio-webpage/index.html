@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>FCC1.5: Personal Portfolio Webpage</title>
+  <link rel="stylesheet" href="../../minireset.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+  <nav id="navbar">
+    <div id="main-title"><a href="#">vimturtle</a></div>
+    <ul>
+      <li>
+        <a class="nav-link" href="#" onclick="handleAbout()">About</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#" onclick="handleContact()">Contact</a>
+      </li>
+      <li><a class="nav-link" href="#projects-header">Projects</a></li>
+      <li>
+        <a class="nav-link" id="profile-link" href="https://freecodecamp.org/vimturtle/"
+          target="_blank">freeCodeCamp</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section id="welcome-section">
+    <h1>Welcome to <span class="name">vimturtle</span>'s homepage!</h1>
+    <p>
+      I am a full-stack software developer specializing in Node.js and Django.
+    </p>
+
+    <div id="json-info">
+      <pre><code>{
+    "name": "<span class="json-value">vimturtle</span>",
+    "github": "<span class="json-value"><a href="https://github.com/vimturtle" target="_blank">https://github.com/vimturtle</a></span>",
+    "age": "<span id="age"></span>",
+    "interests": [
+        "<span class="json-value">programming</span>",
+        "<span class="json-value">open source</span>",
+        "<span class="json-value">mathematics</span>",
+        "<span class="json-value">physics</span>"
+    ],
+    "location": "<span class="json-value">in the browser</span>",
+    "email": "<span class="json-value"><span id="email">hey <i>at</i> example <i>dot</i> org</span></span>"
+}</code></pre>
+    </div>
+  </section>
+
+  <h2 id="projects-header">Projects</h2>
+
+  <section id="projects">
+    <div class="project-tile">
+      <a href="#"><img src="assets/img/vim.png" alt="Tribute Page" />Tribute Page</a>
+    </div>
+    <div class="project-tile">
+      <a href="#"><img src="assets/img/vim.png" alt="Product Landing Page" />Product Landing Page</a>
+    </div>
+    <div class="project-tile">
+      <a href="#"><img src="assets/img/vim.png" alt="Technical Documentation Page" />Technical Documentation Page</a>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <span id="copyright">©</span> <span id="copyrightyear"></span>
+    <span id="footer-name">vimturtle</span>
+  </footer>
+
+  <script src="assets/lib/moment.min.js"></script>
+  <script>
+    document.getElementById(
+      'copyrightyear'
+    ).innerText = new Date().getFullYear();
+
+    dob = moment([2010, 01, 01]);
+    const setAge = setInterval(ageDiff, 1);
+
+    function ageDiff() {
+      document.getElementById('age').innerHTML = moment().diff(
+        dob,
+        'years',
+        true
+      );
+    }
+
+    function handleAbout() {
+      const about = document.getElementById('json-info');
+      about.classList.toggle('scaled');
+    }
+
+    function handleContact() {
+      const email = document.getElementById('email');
+      email.classList.toggle('scaledEmail');
+    }
+  </script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+html {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: rgb(0, 0, 0);
+  color: white;
+  scroll-behavior: smooth;
+  font-size: 1.1rem;
+}
+html a,
+body a {
+  color: rgb(14, 216, 14);
+  text-decoration: none;
+}
+html ::-moz-selection, body ::-moz-selection {
+  background-color: rgb(0, 0, 0);
+  color: rgb(14, 216, 14);
+}
+html ::selection,
+body ::selection {
+  background-color: rgb(0, 0, 0);
+  color: rgb(14, 216, 14);
+}
+
+nav {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  height: 5rem;
+  padding: 1rem;
+  background-color: black;
+  z-index: 1;
+  border-bottom: 1px solid rgb(14, 216, 14);
+}
+nav #main-title {
+  font-size: 2.25rem;
+  color: rgb(9, 224, 9);
+}
+nav ul {
+  display: flex;
+  text-align: right;
+  justify-content: space-around;
+}
+nav ul li {
+  padding: 17px 20px;
+}
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+  }
+  nav #main-title {
+    font-size: 1.75rem;
+  }
+  nav li {
+    font-size: 0.8rem;
+  }
+}
+
+#welcome-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  height: 100vh;
+}
+@media (max-width: 700px) {
+  #welcome-section {
+    margin-top: 1rem;
+    padding: 2rem;
+  }
+}
+#welcome-section h1 {
+  font-size: 2rem;
+}
+@media (max-width: 700px) {
+  #welcome-section h1 {
+    font-size: 1rem;
+  }
+}
+#welcome-section p {
+  margin: 1rem auto;
+  opacity: 0.75;
+  line-height: 1.8rem;
+}
+@media (max-width: 700px) {
+  #welcome-section p {
+    font-size: 0.8rem;
+  }
+}
+#welcome-section pre {
+  text-align: left;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.7;
+  line-height: 1.5rem;
+}
+#welcome-section pre a {
+  color: unset;
+}
+#welcome-section #json-info {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  transition: ease 0.6s;
+}
+@media (max-width: 700px) {
+  #welcome-section #json-info {
+    font-size: 0.6rem;
+    margin-top: unset;
+  }
+}
+#welcome-section #json-info #age {
+  color: #0ed80e;
+}
+#welcome-section #json-info #email {
+  transition: ease 0.6s;
+}
+#welcome-section #json-info .json-value {
+  opacity: 0.75;
+}
+#welcome-section #json-info a {
+  text-decoration: underline;
+}
+#welcome-section .scaled {
+  transform: scale(1.1);
+}
+#welcome-section .scaledEmail {
+  font-size: 1.1rem;
+}
+#welcome-section .name {
+  color: rgb(14, 216, 14);
+  font-size: 2.1rem;
+}
+@media (max-width: 700px) {
+  #welcome-section .name {
+    font-size: 1.2rem;
+  }
+}
+
+#projects-header {
+  text-align: center;
+  font-size: 1.8rem;
+  scroll-margin: 5rem;
+  margin-top: 3rem;
+}
+#projects-header:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 5%;
+  padding-top: 15px;
+  border-bottom: 1px solid rgb(14, 216, 14);
+}
+@media (max-height: 800px) {
+  #projects-header {
+    margin-top: 6rem;
+  }
+}
+@media (max-width: 700px) {
+  #projects-header {
+    font-size: 1.2rem;
+    scroll-margin: 8rem;
+  }
+}
+
+#projects {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10rem 1rem;
+}
+@media (max-width: 700px) {
+  #projects {
+    padding: 3rem 1rem 2rem 1rem;
+  }
+}
+#projects .project-tile a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: ease-in 0.3s;
+}
+@media (max-width: 700px) {
+  #projects .project-tile a {
+    margin-top: 3rem;
+  }
+}
+#projects .project-tile a:hover {
+  transform: scale(1.2);
+}
+#projects .project-tile span {
+  padding: 2rem 1rem;
+  font-size: 1rem;
+}
+#projects img {
+  max-width: 400px;
+  padding: 1.3rem;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 1.75rem;
+  font-size: 0.85rem;
+}
+footer #copyright {
+  font-size: 0.97rem;
+}
+footer #footer-name {
+  color: rgb(14, 216, 14);
+}
