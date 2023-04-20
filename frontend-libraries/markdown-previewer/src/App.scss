@@ -1,0 +1,110 @@
+@import-normalize;
+
+$color: rgb(22, 2, 2);
+$background-color: rgb(214, 202, 223);
+
+body {
+  background-color: $background-color;
+  color: $color;
+  overflow-x: hidden;
+  padding: 1rem;
+
+  #header {
+    text-align: center;
+  }
+
+  ::selection {
+    background-color: rgb(184, 170, 170);
+  }
+
+  a {
+    color: rgb(134, 45, 134);
+    text-decoration: none;
+    border-bottom: 1px solid gray;
+  }
+
+  pre {
+    background-color: rgb(201, 174, 221);
+    font-size: 0.75em;
+    padding: 5px;
+  }
+
+  .links {
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+  }
+}
+
+#main {
+  display: flex;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+
+    textarea {
+      width: 100%;
+      border-bottom: 2px solid gray;
+      padding: 5px 2px;
+    }
+
+    #preview {
+      width: 100%;
+      padding: 5px 5px;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3em;
+
+  a {
+    text-decoration: none;
+    color: rgb(24, 2, 27);
+  }
+}
+
+textarea {
+  background-color: $background-color;
+  color: $color;
+  line-height: 1.6em;
+  font-size: 1.3em;
+  border: none;
+  margin-left: 5px;
+  min-height: 100vh;
+  width: 50%;
+  resize: none;
+  scrollbar-width: 1px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+#preview {
+  color: $color;
+  line-height: 1.6em;
+  font-size: 1.2em;
+  width: 50%;
+  max-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: 1px;
+}
+
+#editor,
+#preview {
+  padding: 20px 50px;
+}
+
+@media (min-width: 900px) {
+  textarea {
+    border-right: 1px solid;
+  }
+}

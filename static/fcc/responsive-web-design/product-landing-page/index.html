@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="../../minireset.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet" />
+  <title>
+    FCC1.3: Product Landing Page
+  </title>
+</head>
+
+<body>
+  <header id="header">
+    <div class="container navbar-container">
+      <a href="#">
+        <div class="logo">
+          <img src="assets/img/quasarmail.png" alt="QuasarMail Logo" id="header-img" />
+        </div>
+      </a>
+
+      <nav id="nav-bar">
+        <ul>
+          <li>
+            <a class="nav-link" href="#features"><i class="fas fa-desktop"></i>Features</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#how-it-works"><i class="fas fa-question-circle"></i>Open source</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#pricing"><i class="fas fa-dollar-sign"></i>Pricing</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero-email">
+    <p class="intro">
+      Secure, ad-free mailbox for individuals and businesses.
+    </p>
+    <form action="https://www.freecodecamp.com/email-submit" id="form">
+      <input type="email" name="email" placeholder="Enter your email address" id="email" required />
+      <input type="submit" id="submit" class="btn" value="Get Started" />
+    </form>
+  </div>
+
+  <div id="features">
+    <div class="container features-container">
+      <p class="title">Features</p>
+      <ul>
+        <li><i class="fas fa-eye-slash"></i>Zero-knowledge privacy</li>
+        <li>
+          <i class="fas fa-file-code"></i>Ad-free email running on
+          <a href="#">open source</a>
+          core
+        </li>
+        <li><i class="fas fa-gift"></i>Free plan for individuals</li>
+        <li>
+          <i class="fas fa-cloud"></i>Premium plans including
+          <a href="#">QuasarDrive</a> (secure cloud storage)
+        </li>
+        <li>
+          <i class="fas fa-key"></i>Servers hosted in Switzerland (<a
+            href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">GDPR</a>
+          compliant)
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="how-it-works">
+    <p class="intro">
+      Understand how
+      <span class="brand">QuasarMail</span> works and<br />
+      why you should care about your privacy.
+    </p>
+    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/yVwAodrjZMY" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div id="why-privacy">
+    <i class="fas fa-quote-left"></i>
+    <blockquote
+      cite="https://www.reddit.com/r/IAmA/comments/36ru89/just_days_left_to_kill_mass_surveillance_under/crglgh2/">
+      <p>
+        "Arguing that you don't care about privacy because you have nothing to
+        hide is no different than saying you don't care about free speech
+        because you have nothing to say."
+      </p>
+      <footer>
+        - Edward Snowden,
+        <a
+          href="https://old.reddit.com/r/IAmA/comments/36ru89/just_days_left_to_kill_mass_surveillance_under/crglgh2/">reddit.com/r/IAmA</a>
+      </footer>
+    </blockquote>
+  </div>
+
+  <div id="pricing">
+    <p class="title">Pricing</p>
+    <div class="container">
+      <div class="pricing-box">
+        <div class="pricing-header">personal</div>
+        <div class="price">FREE</div>
+        <div class="plan-features">
+          <ul>
+            <li><i class="fas fa-chevron-right"></i>Ad-free experience</li>
+            <li>
+              <i class="fas fa-chevron-right"></i>Zero-knowledge security
+            </li>
+            <li>
+              <i class="fas fa-chevron-right"></i>End-to-end encrypted email
+            </li>
+            <li>
+              <i class="fas fa-chevron-right"></i>500 MB QuasarDrive cloud
+              storage
+            </li>
+          </ul>
+        </div>
+        <button class="btn-select-plan">Select</button>
+      </div>
+      <div class="pricing-box">
+        <div class="pricing-header">startup</div>
+        <div class="price">$150/month</div>
+        <div class="plan-features">
+          <ul>
+            <li>
+              <i class="fas fa-chevron-right"></i><span class="highlight">All of Personal plan</span>
+            </li>
+            <li>
+              <i class="fas fa-chevron-right"></i>Zero-knowledge security
+            </li>
+            <li>
+              <i class="fas fa-chevron-right"></i>End-to-end encrypted email
+            </li>
+            <li>
+              <i class="fas fa-chevron-right"></i>50 GB QuasarDrive cloud
+              storage
+            </li>
+          </ul>
+        </div>
+        <button class="btn-select-plan">Select</button>
+      </div>
+      <div class="pricing-box">
+        <div class="pricing-header" id="pricing-header-business">
+          business**
+        </div>
+        <div class="price">> $400/month</div>
+        <div class="plan-features">
+          <ul>
+            <li>
+              <i class="fas fa-chevron-right"></i><span class="highlight">All of Startup plan</span>
+            </li>
+            <li>
+              <i class="fas fa-chevron-right"></i>Zero-knowledge security
+            </li>
+            <li>
+              <i class="fas fa-chevron-right"></i>End-to-end encrypted email
+            </li>
+            <li>
+              <i class="fas fa-chevron-right"></i>Unlimited QuasarDrive cloud
+              storage
+            </li>
+          </ul>
+        </div>
+        <button class="btn-select-plan btn-business-plan">
+          Contact sales
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div>
+      <div id="copyright">
+        <i class="far fa-copyright"></i>
+        <span id="copyrightyear"></span> QuasarMail Inc.
+      </div>
+      <div id="logo-credit">
+        Logo created using <a href="https://logomakr.com">LogoMakr</a>
+      </div>
+    </div>
+    <div id="footer-link-section">
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+    document.getElementById(
+      'copyrightyear'
+    ).innerText = new Date().getFullYear();
+  </script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

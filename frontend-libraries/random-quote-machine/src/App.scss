@@ -1,0 +1,106 @@
+@import-normalize;
+
+$btn-color: rgb(223, 202, 202);
+$background-color: rgb(7, 0, 12);
+$background-color-selection: rgb(218, 207, 223);
+
+body {
+  background-color: $background-color;
+  color: white;
+}
+
+::selection {
+  background-color: $background-color-selection;
+  color: rgb(20, 20, 20);
+}
+
+h1 {
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#quote-box {
+  background-color: rgba(19, 18, 18, 0.6);
+  border: 1px solid rgb(228, 211, 211);
+  max-width: 500px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 17px;
+  width: 90%;
+
+  #header {
+    line-height: 40px;
+  }
+
+  small {
+    margin-bottom: 30px;
+
+    a {
+      text-decoration: none;
+      color: rgb(156, 121, 121);
+    }
+  }
+
+  h3 {
+    text-decoration: underline;
+    text-align: center;
+  }
+
+  #text {
+    line-height: 30px;
+    padding-bottom: 1rem;
+  }
+
+  #author {
+    align-self: flex-end;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  button {
+    all: unset;
+    font-size: 0.8rem;
+    background-color: transparent;
+    color: $btn-color;
+    border: 1px solid rgb(97, 96, 96);
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid;
+      transition: ease 0.3s;
+    }
+
+    a {
+      text-decoration: none;
+      color: $btn-color;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  #quote-box {
+    width: 40%;
+  }
+
+  #text {
+    height: 5rem;
+  }
+}

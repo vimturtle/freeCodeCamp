@@ -1,0 +1,391 @@
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+::-moz-selection {
+  background: rgb(134, 46, 134);
+  color: rgb(245, 241, 241);
+}
+
+::selection {
+  background: rgb(134, 46, 134);
+  color: rgb(245, 241, 241);
+}
+
+header {
+  background-color: rgb(241, 229, 229);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  border-bottom: 1px solid rgb(134, 46, 134);
+}
+header img {
+  padding-top: 0.6rem;
+  width: 15rem;
+  transition: all 0.2s ease-in-out;
+}
+header img:hover {
+  transform: scale(1.02);
+}
+
+button,
+input {
+  border-radius: 2000px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: rgb(134, 46, 134);
+  letter-spacing: 0.2rem;
+}
+.title:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 10%;
+  padding-top: 15px;
+  border-bottom: 1px solid rgb(134, 46, 134);
+}
+@media (max-width: 800px) {
+  .title:after {
+    display: none;
+  }
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 730px) {
+  .navbar-container {
+    flex-direction: column;
+  }
+}
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+#nav-bar ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 700px) {
+  #nav-bar ul {
+    flex-direction: column;
+  }
+}
+#nav-bar ul li {
+  margin: 15px 15px 10px 10px;
+  padding: 20px 20px;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0);
+}
+@media (max-width: 700px) {
+  #nav-bar ul li {
+    margin: 10px auto;
+    padding: 0;
+  }
+}
+#nav-bar ul li i {
+  padding-right: 7px;
+  transition: all 0.2s ease-in-out;
+}
+#nav-bar ul li a {
+  text-decoration: none;
+  color: rgb(134, 46, 134);
+}
+#nav-bar ul li a:hover {
+  color: rgb(89, 21, 92);
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgb(134, 46, 134);
+}
+#nav-bar ul li a:hover i {
+  transform: scale(1.5);
+}
+
+.hero-email {
+  background: rgb(223, 213, 213);
+  margin-top: -10px;
+  padding: 5rem 10rem;
+  text-align: center;
+}
+.hero-email form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-email form #email {
+  width: 30%;
+  height: 3rem;
+  margin-bottom: 10px;
+  border: none;
+  padding: 10px;
+  font-family: Lato;
+}
+@media (max-width: 1000px) {
+  .hero-email form #email {
+    width: 15rem;
+  }
+}
+.hero-email form #submit {
+  color: rgb(134, 46, 134);
+  font-family: Lato;
+  font-size: 1.1rem;
+  height: 3rem;
+  width: 25%;
+  background-color: rgb(241, 229, 229);
+  border: 1px solid rgb(134, 46, 134);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+@media (max-width: 1000px) {
+  .hero-email form #submit {
+    width: 15rem;
+  }
+}
+.hero-email form #submit:hover {
+  font-size: 1.125rem;
+  color: rgb(89, 21, 92);
+}
+.hero-email .intro {
+  color: rgb(134, 46, 134);
+  font-family: Lato;
+  font-size: 2.25rem;
+  padding-bottom: 10px;
+  text-align: center;
+}
+@media (max-width: 750px) {
+  .hero-email .intro {
+    display: none;
+  }
+}
+
+#features {
+  background-color: rgb(241, 229, 229);
+  padding: 3rem;
+  scroll-margin: 90px;
+}
+#features ul {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.25rem;
+}
+@media (max-width: 800px) {
+  #features ul {
+    font-size: 1.15rem;
+  }
+}
+#features ul i {
+  margin-right: 7px;
+  font-size: 1.5rem;
+}
+@media (max-width: 800px) {
+  #features ul i {
+    font-size: 1.25rem;
+  }
+}
+#features ul a {
+  color: rgb(134, 46, 134);
+  text-decoration: none;
+  border-bottom: 1px solid rgb(134, 46, 134);
+}
+#features ul a:hover {
+  color: rgb(89, 21, 92);
+}
+#features ul li {
+  margin: 2.5rem auto;
+}
+
+#how-it-works {
+  background: rgb(223, 213, 213);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5rem;
+  scroll-margin: 90px;
+}
+#how-it-works .intro {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 3rem auto;
+}
+@media (max-width: 500px) {
+  #how-it-works .intro {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.2rem;
+  }
+}
+#how-it-works .intro span {
+  color: rgb(134, 46, 134);
+  font-weight: bold;
+}
+@media (max-width: 800px) {
+  #how-it-works #video {
+    width: 20rem;
+    height: 14rem;
+  }
+}
+
+#why-privacy {
+  background-color: rgb(241, 229, 229);
+  text-align: center;
+  padding: 8rem;
+  font-size: 2rem;
+}
+@media (max-width: 800px) {
+  #why-privacy {
+    padding: 2rem 1rem;
+  }
+}
+#why-privacy blockquote p {
+  margin-top: 10px;
+  line-height: 3.5rem;
+}
+@media (max-width: 800px) {
+  #why-privacy blockquote p {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+}
+#why-privacy footer {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  font-family: Lato;
+  font-style: italic;
+}
+#why-privacy footer a {
+  color: rgb(134, 46, 134);
+  font-size: 1rem;
+  background-color: rgb(223, 213, 213);
+}
+
+#pricing {
+  background-color: rgb(223, 213, 213);
+  padding: 2rem;
+  scroll-margin: 90px;
+}
+#pricing .highlight {
+  color: rgb(134, 46, 134);
+  border-bottom: 1px solid rgb(134, 46, 134);
+}
+#pricing i {
+  margin-right: 5px;
+}
+#pricing .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+#pricing .pricing-box {
+  border: 1px solid rgb(134, 46, 134);
+  padding: 3rem;
+  height: 23rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+@media (max-width: 800px) {
+  #pricing .pricing-box {
+    height: 28rem;
+  }
+}
+#pricing .pricing-box .pricing-header {
+  font-family: Lato;
+  font-size: 2rem;
+  background-color: rgb(202, 189, 189);
+  margin-top: -46px;
+  margin-left: -46px;
+  margin-right: -46px;
+  padding: 10px 50px;
+  text-align: center;
+  border-bottom: 1px solid rgb(134, 46, 134);
+}
+#pricing .pricing-box #pricing-header-business {
+  color: rgb(119, 20, 81);
+}
+#pricing .pricing-box .price {
+  margin-top: 20px;
+  border-bottom: 1px solid rgb(134, 46, 134);
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: Lato;
+}
+#pricing .pricing-box .plan-features {
+  line-height: 2rem;
+  margin: 20px auto;
+}
+#pricing .pricing-box .btn-select-plan {
+  align-self: center;
+  width: 70%;
+  height: 2.9rem;
+  background-color: rgb(77, 54, 78);
+  color: rgb(236, 231, 231);
+  font-family: Lato;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border: 1px solid rgb(134, 46, 134);
+  transition: all 0.2s ease-in-out;
+}
+#pricing .pricing-box .btn-select-plan:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+#pricing .pricing-box .btn-business-plan {
+  background-color: rgb(97, 58, 189);
+  color: rgb(231, 220, 220);
+}
+@media (max-width: 400px) {
+  #pricing .pricing-box .btn-business-plan {
+    width: 100%;
+  }
+}
+
+#footer {
+  padding: 3rem;
+  background-color: rgb(241, 229, 229);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#footer #copyright {
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 15px;
+}
+#footer #logo-credit {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.7rem;
+}
+#footer #logo-credit a {
+  text-decoration: none;
+  color: unset;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+#footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#footer ul li {
+  margin: 15px;
+}
+#footer ul li a {
+  text-decoration: none;
+  color: rgb(134, 46, 134);
+}
+#footer ul li a:hover {
+  color: rgb(89, 21, 92);
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgb(134, 46, 134);
+}
